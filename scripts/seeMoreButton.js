@@ -6,7 +6,7 @@ Use a window.resize event to keep maxHeight up to date
 Ensure expandableContent is generated every launch - perhaps as a property of the button object?
 */
 
-
+let expandableContentList = document.querySelectorAll
 
 
 // Find all elements in DOM with the see-more-button class, compile into array.
