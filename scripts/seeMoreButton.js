@@ -1,76 +1,77 @@
-/*
-TODO: Rework logic to move animation definition object and variables
-this object references OUT of the buttonClick function
-
-Use a window.resize event to keep maxHeight up to date
-Ensure expandableContent is generated every launch - perhaps as a property of the button object?
-*/
-
-let expandableContentList = document.querySelectorAll
-
+// GENERATE LIST OF BUTTON OBJECTS
+// Button objects store info about their targets
 
 // Find all elements in DOM with the see-more-button class, compile into array.
-let buttonList = document.querySelectorAll(".see-more-button");
+let buttonNodes= document.querySelectorAll(".see-more-button");
 
-// For each button add event listener "click".
-buttonList.forEach((button) => button.addEventListener("click", buttonClick.bind(button)));
-//let expandableContent = document.querySelector("." + this.closest("div").className + "__extended");  
+// Array for button objects
+let buttonObjects = [];
 
+// Generate button objects, each containing
+// - Reference to the DOM node of each button
+// - Target extended content div
+// - Target max height
+// - Is target div visible?
+// - Method that generates new max height (run on load + on window resize)
+// - Method that handles button clicks, animations
+buttonNodes.forEach(function(button) {
+  buttonObjects.push({  
+    "node" : button,
+    "target": "." + button.closest("div").className + "__extended",
+    "targetMaxHeight": 0,    
+    "targetVisible" : false,
 
+    generateMaxHeight: function(){      
+      this.targetMaxHeight = document.querySelector(this.target).scrollHeight + "px";   
 
-function buttonClick() {  
+      // Sneaky put this guy in here
+      // Update DOM to reflect new height if window resized while extended content visible
+      if (this.targetVisible == true) {
+        document.querySelector(this.target).style.height = this.targetMaxHeight;   
+      }
+    },
+    
+    buttonClick: function(){
+      let animDirection = (this.targetVisible == true) ? "reverse" : "normal";
 
+      let hideShowAnim = anime({
+        targets: this.target,    
+        height: [30, this.targetMaxHeight],   
+        "-webkit-mask-image": "linear-gradient(to bottom, black, rgba(0, 0, 0, 1))",
+        duration: 250,
+        direction: animDirection,
+        easing: 'easeInQuad'        
+      });    
+      
+      hideShowAnim.restart();
 
-  let expandableContent = document.querySelector(".web-portfolio__extended")
-  let maxHeight = expandableContent.scrollHeight + "px";  
-    console.log(maxHeight);
-  
-  let hideShowAnim = anime({
-    targets: expandableContent,    
-    height: [30, maxHeight],   
-    "-webkit-mask-image": "linear-gradient(to bottom, black, rgba(0, 0, 0, 1))",
-    duration: 250,
-    easing: 'easeInQuad',
-    complete: function(anim) {
-      anim.direction = (anim.direction == "normal") ? "reverse" :  "normal";
+      this.targetVisible = (this.targetVisible == true) ? false : true;
+      console.log(this.targetVisible);
     }
   });
+});
 
 
-  // For each button, generate selector for extended content div using the className of the parent <div> and an identifying suffix. 
-  // THIS references current button.
-  // TODO: Performance: maybe unwise to do this on EVERY button click? Try on page load.  
- 
-  let button = this;
-  let buttonIcon = this.firstChild;
-
-  // Set max height of expandable container to fit current contents
-  
- 
-
-  // Set up anime.js animation
-  // Initial values set in styles.css, apart from height which uses a [to, from] range
-  // Do not replace the to-from range with a single to value - this breaks anime.js
- 
-
-  // TODO: The below code plays the animation forwards smoothly, but reverts instantly when
-  // it should smoothly reverse animation. Why?
-  // Have tried checking whether hideShowAnim.began is true before setting reverse - no luck.
+// Generate maxHeight for each button on page load
+buttonObjects.forEach(function(button) {
+  button.generateMaxHeight();
+});
 
 
-  // Animate
-  hideShowAnim.restart();
-    // Change button icon
-    // TODO: Animate button
-    // Change activated status
-   
+// GENERATE BUTTON OBJECT INFO ON WINDOW RESIZE
+
+// Window resize event: generate new maxHeight target for each item in buttonObject[]
+// Use timeout to limit generateMaxHeights calls to only occur once the window has reached final size
+let timeout;
+addEventListener('resize', (event) => {  
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {generateMaxHeights()}, 200);  
+});
+
+function generateMaxHeights () {
+  buttonObjects.forEach((button) => {button.generateMaxHeight()});   
 }
 
-
-
-
-
-
-
-
-
+buttonObjects.forEach((buttonObject) => {  
+  buttonObject.node.addEventListener("click", buttonObject.buttonClick.bind(buttonObject));
+});
