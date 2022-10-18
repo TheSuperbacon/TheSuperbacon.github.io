@@ -1,11 +1,23 @@
+// Overview
+// Each DOM button is associated with a JS Object that holds
+// information about the button's target div
+// methods for updating the target div maxHeight
+// and for handling animation of target div
+
+// Bugs TODO:
+// When resizing window while target div is expanded, div will GROW but not SHRINK - max height is locking at upper
+// limit?
+// PROBLEM - scrollHeight can increase but not decrease dynamically?
+
 // GENERATE LIST OF BUTTON OBJECTS
 // Button objects store info about their targets
-
 // Find all elements in DOM with the see-more-button class, compile into array.
 let buttonNodes= document.querySelectorAll(".see-more-button");
 
+
 // Array for button objects
 let buttonObjects = [];
+
 
 // Generate button objects, each containing
 // - Reference to the DOM node of each button
@@ -22,7 +34,9 @@ buttonNodes.forEach(function(button) {
     "targetVisible" : false,
 
     generateMaxHeight: function(){      
-      this.targetMaxHeight = document.querySelector(this.target).scrollHeight + "px";   
+      this.targetMaxHeight = document.querySelector(this.target).scrollHeight + "px";        
+      console.log(this.targetMaxHeight);
+      console.log(document.querySelector(this.target).scrollHeight);
 
       // Sneaky put this guy in here
       // Update DOM to reflect new height if window resized while extended content visible
@@ -30,8 +44,13 @@ buttonNodes.forEach(function(button) {
         document.querySelector(this.target).style.height = this.targetMaxHeight;   
       }
     },
-    
+  
     buttonClick: function(){
+      this.animateTarget();
+      this.animateSelf();
+    },   
+
+    animateTarget: function(){
       let animDirection = (this.targetVisible == true) ? "reverse" : "normal";
 
       let hideShowAnim = anime({
@@ -47,7 +66,35 @@ buttonNodes.forEach(function(button) {
 
       this.targetVisible = (this.targetVisible == true) ? false : true;
       console.log(this.targetVisible);
+    },
+
+    animateSelf: function(){
+      
+      let animDirection = (this.targetVisible == true) ? "reverse" : "normal";      
+
+      let buttonFlipAnim = anime({
+
+        begin: function(anim){
+          console.log(anim.direction);
+        },
+
+        targets: this.node,  
+        autoplay: false, 
+        duration: 350,
+        direction: animDirection,        
+        easing: "linear",
+        opacity: [
+          { value: 1},
+          { value: 0},
+          { value: 0},
+          { value: 1}
+        ],
+        scaleY: [-1, 1]       
+      });       
+
+      buttonFlipAnim.restart();      
     }
+
   });
 });
 
@@ -59,7 +106,6 @@ buttonObjects.forEach(function(button) {
 
 
 // GENERATE BUTTON OBJECT INFO ON WINDOW RESIZE
-
 // Window resize event: generate new maxHeight target for each item in buttonObject[]
 // Use timeout to limit generateMaxHeights calls to only occur once the window has reached final size
 let timeout;

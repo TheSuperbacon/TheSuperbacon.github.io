@@ -374,8 +374,8 @@ h1::after {
   width: 70px;
   height: 40px;
   background-image: url(/img/icon_arrow.svg);
-  background-size: 100%;
-  
+  background-repeat: no-repeat;
+  background-size: 100%;    
   }
 
  
