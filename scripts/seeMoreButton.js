@@ -94,7 +94,6 @@ buttonNodes.forEach(function(button) {
 
       buttonFlipAnim.restart();      
     }
-
   });
 });
 
