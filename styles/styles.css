@@ -55,8 +55,7 @@ html {
   ".  me me me me me me me me me me  ."
   ".  wb wb wb wb wb wb wb wb wb wb  ."
   ".  ar ar ar ar ar ar ar ar ar ar  ."   
-  "cn cn cn cn cn cn cn cn cn cn cn cn";  
-  
+  "cn cn cn cn cn cn cn cn cn cn cn cn";    
 }
 
 
@@ -93,8 +92,13 @@ html {
   grid-area: cn;
   display: flex;
   flex-direction:column;
+  margin-bottom: 0;  
   background-color: var(--secondary-bg-color);
-  max-width: auto;
+  max-width: 100%;
+  text-align: center;
+  /* below ensures that contact info not hidden behind nav bar */
+  padding-top: 10vh;
+  min-height: 90vh;
 }
 
 p {
