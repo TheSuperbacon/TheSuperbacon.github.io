@@ -333,14 +333,16 @@ h1::after {
 
 .image-hero {
   display: block;
-  width: 40%;
+  
   height: auto;
   margin: 2em auto 2em auto; 
   transition: filter 0.5s ease-out; 
+  max-height: 300px;
 }
 
 .image-hero:hover {
   filter: drop-shadow(0px 0px 5px rgb(255, 255, 255)); 
+  
 }
 
 .icon-small{
