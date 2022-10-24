@@ -1,12 +1,3 @@
-
-/* 
-  Margin at bottom of each section 8em
-  TODO turn this into a global variable or more easily integrate
-  this into JQuery somehow? Only if needed for scroll calcs
- */
-
- 
-
 /* 
   || Boilerplate padding/margin changes
 */
@@ -31,6 +22,21 @@ html {
   --main-link-color: white;
   --secondary-link-color: turquoise;
   --secondary-text-color: rgb(136, 189, 183);
+}
+
+.section-header__contact {
+  margin: auto;
+  max-width: 100em;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.section-header__contact > * {
+  margin: 0.4em;
+  font-family: 'Major Mono Display', monospace;  
 }
 
 /* 
@@ -255,7 +261,7 @@ h3, h4 {
 
 h1 {
   /* margin-top: 0.2em; */
-  font-size: 20vw;
+  font-size: 15vw;
   font-weight: 100;
   font-family: 'Major Mono Display', monospace;  
   /* line-height: 0.9em; */
@@ -263,7 +269,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4em;
+  font-size: 13vw;
   font-weight: 100;
   font-family: 'Major Mono Display', monospace;  
   margin-bottom: 0.2em;
@@ -332,12 +338,11 @@ h1::after {
 }
 
 .image-hero {
-  display: block;
-  
+  display: block;  
   height: auto;
   margin: 2em auto 2em auto; 
   transition: filter 0.5s ease-out; 
-  max-height: 300px;
+  max-width: 80vw;
 }
 
 .image-hero:hover {

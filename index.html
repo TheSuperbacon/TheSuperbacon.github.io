@@ -24,7 +24,7 @@
     <!-- Google Fonts link Major Mono Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link "rel=preload" href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=block" rel="stylesheet">
+    <link rel=preload" href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=block" rel="stylesheet">
   
   
   
@@ -34,16 +34,10 @@
 
 <body id="body-container"> 
 
-  <nav class="menu">               
-      <a class="button" id="button-header" href="javascript:;">
-        <div class="button__top-spacer"></div>
-          &#9670 <!-- Diamond symbol -->
-        <div class="button__bottom-spacer"></div> <!-- use menu-button_active-indicator--active modifier -->
-      </a>
-      
+  <nav class="menu">                 
       <a class="button" id="button-me" href="javascript:;">
         <div class="button__top-spacer"></div>
-          Me <!-- Diamond symbol -->
+          Me<!-- Diamond symbol -->
         <div class="button__bottom-spacer"></div> <!-- use menu-button_active-indicator--active modifier -->
       </a>
 
@@ -67,7 +61,7 @@
         
         <a class="button" id="button-cv" href="https://drive.google.com/file/d/1R6llTuiT77QOxikivuKY9irlxfl_XhJ9/view?usp=sharing">
           <div class="button__top-spacer"></div>
-            <span>CV <i class="fa-solid fa-arrow-up-right-from-square"></i></span> 
+            <span>CV</span> 
           <div class="button__bottom-spacer"></div> <!-- use menu-button_active-indicator--active modifier -->
         </a>
   
@@ -78,12 +72,17 @@
     <h1>zAc<br>hoGan</h1> 
     <br>
     <h3 class="secondary-title"> i make the front bits of websites</h3>
-    <br>
-    <p><a href="https://github.com/zacvhogan/"><i class="fa-brands fa-github"></i></a>
+    <br>    
+    <div class="section-header__contact">
+      <a href="https://github.com/zacvhogan/"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.linkedin.com/in/zachary-hogan-7a5147250/"><i class="fa-brands fa-linkedin"></i></a>
-      zacvanhogan@gmail.com <a href="mailto:zacvanhogan@gmail.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+      <span>
+        <a href="mailto:zacvanhogan@gmail.com"">zacvanhogan@gmail.com</a> 
+        <a href="mailto:zacvanhogan@gmail.com"><i class="fa-solid fa-copy"></i></a>
+      </span>
+    </div>
     <br>
-    <img src="img/HeroImage.png" class="image-hero">        
+    <img src="img/HeroImage.png" class="image-hero">  
   </header>
 
 
@@ -184,12 +183,13 @@
             - HTML, CSS, and JS.
           </p>
 
-          <p><strong>Libraries: </strong>
-          <br>Using 
-          <ul>
-            <li><a href="https://glidejs.com/">Glide.js</a> for image carousel,</li>
-            <li><a href="https://animejs.com/"">Anime.js</a> for the more complex animations.</li>
-          </ul>
+          <p>
+            <strong>Libraries: </strong>
+            <br>Using 
+            <ul>
+              <li><a href="https://glidejs.com/">Glide.js</a> for image carousel,</li>
+              <li><a href="https://animejs.com/">Anime.js</a> for the more complex animations.</li>
+            </ul>
           </p>
 
           <p><strong>Stack: </strong>
@@ -277,11 +277,11 @@
           <div class="glide">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/qQVN3z"><img src="/img/glideImages/1.jpg"></img></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/LeQr9P"><img src="/img/glideImages/2.jpg"></img></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/X1LOEL"><img src="/img/glideImages/3.jpg"></img></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/4.jpg"></img></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/5.jpg"></img></a></li>
+                <li class="glide__slide"><a href="https://www.artstation.com/artwork/qQVN3z"><img src="/img/glideImages/1.jpg"></a></li>
+                <li class="glide__slide"><a href="https://www.artstation.com/artwork/LeQr9P"><img src="/img/glideImages/2.jpg"></a></li>
+                <li class="glide__slide"><a href="https://www.artstation.com/artwork/X1LOEL"><img src="/img/glideImages/3.jpg"></a></li>
+                <li class="glide__slide"><a href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/4.jpg"></a></li>
+                <li class="glide__slide"><a href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/5.jpg"></a></li>
               </ul>
             </div>
           </div> 
@@ -331,7 +331,7 @@
 
   
 
-  <div class="section" id="section-contact">
+  <!-- <div class="section" id="section-contact">
     <h2 id="contact-header">contact</h2>
     <p>
       zacvanhogan@gmail.com <a href="mailto:zacvanhogan@gmail.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -343,9 +343,8 @@
     <img src="img/HeroImage.png" class="image-hero"> 
     <p class="footer">
       Copyright © 2022 Zac Hogan 
-    </p>  
-    
-  </div>
+    </p>    
+  </div> -->
 </body>
 
 
@@ -353,8 +352,7 @@
 <script async>
   new Glide('.glide', {
     type: "carousel",    
-    focusAt: "center",
-    
+    focusAt: "center",    
     autoplay: 2500,
     animationDuration: 1000,
     animationTimingFunc: "ease",
@@ -367,17 +365,3 @@
 <script src="scripts/seeMoreButton.js"></script>
 
 </html>
-
-
-
-<!-- Credits and stuff
-Font Major Mono Display for header
-
--->
-
-<!-- TODO
-Sections:
-  Add Skills/Software
-  Add Other work? Link to store, etc
-
--->
