@@ -17,11 +17,19 @@ html {
 
 :root {
   --main-bg-color: rgb(24, 42, 46);
-  --secondary-bg-color: rgb(72, 99, 124);
+  --secondary-bg-color: #48637c;
   --main-text-color: white;
   --main-link-color: white;
   --secondary-link-color: turquoise;
   --secondary-text-color: rgb(136, 189, 183);
+}
+
+#button-cv {
+  color: turquoise
+}
+
+#button-cv:hover {
+  color: rgb(196, 246, 255)
 }
 
 .section-header__contact {
@@ -35,9 +43,10 @@ html {
 }
 
 .section-header__contact > * {
-  margin: 0.4em;
-  font-family: 'Major Mono Display', monospace;  
+  margin: 0.4em;    
 }
+
+
 
 /* 
   || Grid Container
@@ -94,6 +103,8 @@ html {
   flex-direction:column;
 }
 
+
+
 #section-contact {
   position: relative;
   grid-area: cn;
@@ -105,10 +116,17 @@ html {
   background-color: var(--secondary-bg-color);
   max-width: 100%;
  
-  /* below ensures that contact info not hidden behind nav bar */
-  padding-top: 10vh;
-  min-height: 90vh;
+  /* below ensures that contact info not hidden behind nav bar */  
+  margin-top: 10vh;
+  min-height: 90vh; 
+  outline-color: var(--secondary-bg-color);
+  outline-width: 10vh;
+  outline-style: solid;
 }
+
+
+
+
 
 .footer {
   font-size: smaller;
@@ -269,7 +287,7 @@ h1 {
 }
 
 h2 {
-  font-size: 13vw;
+  font-size: min(4em, 13vw);
   font-weight: 100;
   font-family: 'Major Mono Display', monospace;  
   margin-bottom: 0.2em;
@@ -338,11 +356,10 @@ h1::after {
 }
 
 .image-hero {
-  display: block;  
-  height: auto;
+  display: block;    
   margin: 2em auto 2em auto; 
   transition: filter 0.5s ease-out; 
-  max-width: 80vw;
+  width: min(20em, 50vw);
 }
 
 .image-hero:hover {
@@ -381,7 +398,7 @@ h1::after {
   height: 30px;
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-  
+  overflow: clip;
 }
 
 

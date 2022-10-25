@@ -35,9 +35,9 @@
 <body id="body-container"> 
 
   <nav class="menu">                 
-      <a class="button" id="button-me" href="javascript:;">
+      <a class="button" id="button-header" href="javascript:;">
         <div class="button__top-spacer"></div>
-          Me<!-- Diamond symbol -->
+          Me
         <div class="button__bottom-spacer"></div> <!-- use menu-button_active-indicator--active modifier -->
       </a>
 
@@ -49,17 +49,17 @@
   
         <a class="button" id="button-other" href="javascript:;">
           <div class="button__top-spacer"></div>
-            Other <!-- Diamond symbol -->
+            Other
           <div class="button__bottom-spacer"></div> <!-- use menu-button_active-indicator--active modifier -->
         </a>
         
         <a class="button" id="button-contact" href="javascript:;">
           <div class="button__top-spacer"></div>
-            Contact <!-- Diamond symbol -->
+            Contact
           <div class="button__bottom-spacer"></div> <!-- use menu-button_active-indicator--active modifier -->
         </a>
         
-        <a class="button" id="button-cv" href="https://drive.google.com/file/d/1R6llTuiT77QOxikivuKY9irlxfl_XhJ9/view?usp=sharing">
+        <a target="_blank" class="button" id="button-cv" href="doc/ZH CV.pdf">
           <div class="button__top-spacer"></div>
             <span>CV</span> 
           <div class="button__bottom-spacer"></div> <!-- use menu-button_active-indicator--active modifier -->
@@ -74,12 +74,12 @@
     <h3 class="secondary-title"> i make the front bits of websites</h3>
     <br>    
     <div class="section-header__contact">
-      <a href="https://github.com/zacvhogan/"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/zachary-hogan-7a5147250/"><i class="fa-brands fa-linkedin"></i></a>
-      <span>
-        <a href="mailto:zacvanhogan@gmail.com">zacvanhogan@gmail.com</a> 
-        <a href="mailto:zacvanhogan@gmail.com"><i class="fa-solid fa-copy"></i></a>
-      </span>
+      <a target="_blank" href="https://github.com/zacvhogan/"><i class="fa-brands fa-github"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/zachary-hogan-7a5147250/"><i class="fa-brands fa-linkedin"></i></a>
+      <p>
+        <a target="_blank" href="mailto:zacvanhogan@gmail.com">zacvanhogan@gmail.com</a> 
+        <!-- <a target="_blank" href="mailto:zacvanhogan@gmail.com"><i class="fa-solid fa-copy"></i></a> -->
+      </p>
     </div>
     <br>
     <img src="img/HeroImage.png" class="image-hero">  
@@ -138,31 +138,45 @@
       
       <div class="web-skills">     
         <p>
-          <ul class="list-no-bullets">
-            <li><strong>Languages:</strong> HTML - CSS - Javascript</li>
-            <li><strong>Libraries:</strong>  jQuery - Anime.js - Glide.js - more</li> 
-            <li><strong>Tools:</strong>  Git - Github - Terminal - VMs - Windows/MacOS/Linux</li>     
-            <li><strong>Methodologies:</strong>  BEM </li>       
-
-          </ul>
-        </p>
+        <ul class="list-no-bullets">
+          <li><strong>Languages:</strong> 
+            <br>
+            HTML - CSS - Javascript</li>
+          <li><strong>Libraries:</strong>  
+            <br>
+            jQuery - Anime.js - Glide.js - more</li> 
+          <li><strong>Tools:</strong>  
+            <br>
+            Git - Github - Terminal - VMs - Lighthouse/Web.dev - w3 Validator - Windows/MacOS/Linux</li>     
+          <li><strong>Methodologies:</strong>  
+            <br>
+            BEM </li>    
+        </ul>
+      </p>
+        
         
       </div>
 
       <h4><strong>Web-adjacent skills</strong></h4>
       
       <div class="web-skills">     
-        <p>
-          <ul class="list-no-bullets">    
-            <li><strong>Passion for tech:</strong>  Experienced in building hardware/software solutions with the end-user experience in mind. 
-              Passionate about learning new skills.</li>        
-            <li><strong>2D Design:</strong>  Experience in design and illustration, Bachelors degree in Visual Arts.</li>
-            <li><strong>3D Design:</strong>  Experienced in designing, rendering, and basic animation in Blender 3D.</li>
-            <li><strong>Video and Animation:</strong>  Experienced in Premiere Pro and After Effects.</li>
-          
-          </ul>
-       </p>
-        
+        <p>      
+        <ul class="list-no-bullets">    
+          <li><strong>Passion for tech:</strong>  
+            <br>
+            Experienced in building hardware/software solutions with the end-user experience in mind. 
+            Passionate about learning new skills.</li>        
+          <li><strong>2D Design:</strong>  
+            <br>
+            Experience in design and illustration, Bachelors degree in Visual Arts.</li>
+          <li><strong>3D Design:</strong>  
+            <br>
+            Experienced in designing, rendering, and basic animation in Blender 3D.</li>
+          <li><strong>Video and Animation:</strong>  
+            <br>
+            Experienced in Premiere Pro and After Effects.</li>
+        </ul>
+      </p>       
       </div>
     </article>
 
@@ -170,7 +184,7 @@
       <h4><strong>www.zachoGAn.com</strong> portfolio&nbsp;website</h4>
       
       <div class="web-portfolio">               
-        <p><a href="https://github.com/zacvhogan/zacvhogan.github.io"><i class="fa-brands fa-github"></i></a></p>        
+        <p><a target="_blank" href="https://github.com/zacvhogan/zacvhogan.github.io"><i class="fa-brands fa-github"></i></a></p>        
         <p>A little portfolio site about me. Largely designed and developed from scratch, and with the help of a couple of
           external libraries.</p> 
         
@@ -186,11 +200,12 @@
           <p>
             <strong>Libraries: </strong>
             <br>Using 
-            <ul>
-              <li><a href="https://glidejs.com/">Glide.js</a> for image carousel,</li>
-              <li><a href="https://animejs.com/">Anime.js</a> for the more complex animations.</li>
-            </ul>
           </p>
+            <ul>
+              <li><a target="_blank" href="https://glidejs.com/">Glide.js</a> for image carousel,</li>
+              <li><a target="_blank" href="https://animejs.com/">Anime.js</a> for the more complex animations.</li>
+            </ul>
+          
 
           <p><strong>Stack: </strong>
             <br>The page was 
@@ -210,7 +225,7 @@
     <article>
       <h4><strong>easyscrollto.js</strong> js library</h4>
       <div class="web-easy-scroll">        
-        <p><a href="https://github.com/zacvhogan/easyScrollTo"><i class="fa-brands fa-github"></i></a></p>        
+        <p><a target="_blank" href="https://github.com/zacvhogan/easyScrollTo"><i class="fa-brands fa-github"></i></a></p>        
         <p>A tiny JS library that I developed to quickly implement smooth scrolling to page sections driven by
           page links and buttons.</p>          
 
@@ -245,7 +260,7 @@
             <strong>More detail: </strong> 
             <br>
             For more details about implementation, 
-            see the <a href="https://github.com/zacvhogan/easyScrollTo">Github repository</a> for this project.
+            see the <a target="_blank" href="https://github.com/zacvhogan/easyScrollTo">Github repository</a> for this project.
           </p>       
           <br>  
         </div>
@@ -261,31 +276,6 @@
       I've done a broad range of work in my professional and hobbyist life that 
       has given me cross-disciplinary skills and understanding.
     </p>
-
-    <div>
-      <h3 class="section__content-heading">design and illustrAtion</h3>  
-        <p>
-          I studied Visual Art at the University of Auckland, with a partial focus on illustration and 
-          concept art for media. I've developed skills in 3D design and rendering, as well as 2D painting
-          and editing in Photoshop.
-        </p>
-        <p>
-          I have a good visual eye which has been invaluable in supporting design decisions
-          in my personal web development work.
-        </p>
-
-          <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/qQVN3z"><img src="/img/glideImages/1.jpg"></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/LeQr9P"><img src="/img/glideImages/2.jpg"></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/X1LOEL"><img src="/img/glideImages/3.jpg"></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/4.jpg"></a></li>
-                <li class="glide__slide"><a href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/5.jpg"></a></li>
-              </ul>
-            </div>
-          </div> 
-    </div>
 
     <div class="makerspace">
       <h3>makerspAce</h3> <h4>management, development, and design</h4>
@@ -325,20 +315,43 @@
         </div>
         <button class="see-more-button makerspace__see-more-button"></button>
     </div>
-  
+
+    <div>
+      <h3 class="section__content-heading">design and illustrAtion</h3>  
+        <p>
+          I studied Visual Art at the University of Auckland, with a partial focus on illustration and 
+          concept art for media. I've developed skills in 3D design and rendering, as well as 2D painting
+          and editing in Photoshop.
+        </p>
+        <p>
+          I have a good visual eye which has been invaluable in supporting design decisions
+          in my personal web development work.
+        </p>
+
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide"><a target="_blank" href="https://www.artstation.com/artwork/qQVN3z"><img src="/img/glideImages/1.jpg"></a></li>
+                <li class="glide__slide"><a target="_blank" href="https://www.artstation.com/artwork/LeQr9P"><img src="/img/glideImages/2.jpg"></a></li>
+                <li class="glide__slide"><a target="_blank" href="https://www.artstation.com/artwork/X1LOEL"><img src="/img/glideImages/3.jpg"></a></li>
+                <li class="glide__slide"><a target="_blank" href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/4.jpg"></a></li>
+                <li class="glide__slide"><a target="_blank" href="https://www.artstation.com/artwork/8wX5Dx"><img src="/img/glideImages/5.jpg"></a></li>
+              </ul>
+            </div>
+          </div> 
+    </div>
+      
   </div>
-
-
-  
 
   <div class="section" id="section-contact">
     <h2 id="contact-header">contact</h2>
     <p>
-      zacvanhogan@gmail.com <a href="mailto:zacvanhogan@gmail.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a target="_blank" href="mailto:zacvanhogan@gmail.com">zacvanhogan@gmail.com</a> 
+      <!-- <a target="_blank" href="mailto:zacvanhogan@gmail.com"><i class="fa-solid fa-copy"></i></a> -->
     </p>
     <p>
-      <a href="https://github.com/zacvhogan/"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/zachary-hogan-7a5147250/"><i class="fa-brands fa-linkedin"></i></a>
+      <a target="_blank" href="https://github.com/zacvhogan/"><i class="fa-brands fa-github"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/zachary-hogan-7a5147250/"><i class="fa-brands fa-linkedin"></i></a>
     </p>
     <img src="img/HeroImage.png" class="image-hero"> 
     <p class="footer">
@@ -346,10 +359,7 @@
     </p>    
   </div>
 </body>
-
-
-
-<script async>
+<script async type="module">
   new Glide('.glide', {
     type: "carousel",    
     focusAt: "center",    
@@ -357,11 +367,8 @@
     animationDuration: 1000,
     animationTimingFunc: "ease",
     peek: 70
-  }).mount();
+  }).mount({});
 </script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
 <script src="scripts/seeMoreButton.js"></script>
-
 </html>
