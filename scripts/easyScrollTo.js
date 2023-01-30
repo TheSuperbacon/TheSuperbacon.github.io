@@ -1,3 +1,10 @@
+// TODO: Rework how this library is implemented in projects.
+// - Current issue: hard-coding topNavBarHeight limits functionality and may cause problems for developers.
+// - Explore JS modules, Glide.js's 'mount' function, etc, for alternatives.
+
+// ==============
+
+
 // Your nav bar height in px
 // Scroll calculations offset scroll by this amount to keep target section on screen
 let topNavBarHeight = 100; 
