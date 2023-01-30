@@ -1,4 +1,5 @@
 /db
 /node_modules
 /scripts/node_modules
+/subdomain
 README.md
