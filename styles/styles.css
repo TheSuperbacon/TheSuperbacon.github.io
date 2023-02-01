@@ -381,7 +381,7 @@ h1::after {
   border: 1px solid red;
 }
 
-.web-portfolio, .web-easy-scroll{
+.web-portfolio, .web-easy-scroll, .web-curiosity{
   border-left: 3px solid white;
   padding-left: 1em;
   margin-top: 1em;  
@@ -399,6 +399,16 @@ h1::after {
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
   overflow: clip;
+}
+
+.text-alpha {
+  color: salmon;
+}
+
+/* TODO: REWORK THIS SO THAT IT FITS WITH BEM OR SOME SORT OF LOGIC PLEASE */
+.web-skills-container {
+  border: 2px solid var(--secondary-text-color);
+  padding: 0.7em;
 }
 
 

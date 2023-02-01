@@ -100,28 +100,27 @@
     </p>  
     <p>
       <strong>I'm looking for a Junior Frontend Developer role. </strong>        
-    </p>  
-     
-    <div class="about-me__extended extendable-content">
-      <p>
-        I've been messing with computers my entire life. From tinkering with Half Life 2 mods as a teenager to diving into game
-        design and development at University, I've tried it all.        
-      </p>     
-      <p>
-        For the past few years I've been managing the systems, services, and technology for a public library Makerspace.
-        My life with tech has been one of self-teaching, finding the solutions that help me to meet my goals,
-        and fixing things.
-      </p>
-      <p>  
-        Now I'm back behind the keyboard, wearing out my angle brackets and curly braces as I work towards entering 
-        the industry as a <strong>Frontend&nbsp;developer.</strong>
-        <br><br>
-      </p>
+    </p> 
+
+    <p>
+      I've been messing with computers my entire life. From tinkering with Half Life 2 mods as a teenager to diving into game
+      design and development at University, I've tried it all.        
+    </p>     
+    <p>
+      For the past few years I've been managing the systems, services, and technology for a public library Makerspace.
+      My life with tech has been one of self-teaching, finding the solutions that help me to meet my goals,
+      and fixing things.
+    </p>
+    <p>  
+      Now I'm back behind the keyboard, wearing out my angle brackets and curly braces as I work towards entering 
+      the industry as a <strong>Frontend&nbsp;developer.</strong>
+      <br><br>
+    </p>
         
 
     </div>
 
-    <button class="see-more-button about-me__see-more-button"></button>    
+       
   </div>
   </div>
 
@@ -131,9 +130,149 @@
 
 
   <div class="section" id="section-web">
-    <h2>Web</h2> <br>
+    <h2>Web</h2> <br>    
 
     <article>
+      <h4>project - www.zachoGAn.com</h4>
+      
+      <div class="web-portfolio">               
+        <p><a target="_blank" href="https://github.com/zacvhogan/zacvhogan.github.io"><i class="fa-brands fa-github"></i></a></p>        
+        <p>A little portfolio site about me. Largely designed and developed from scratch, and with the help of a couple of
+          external libraries.</p> 
+        
+        <div class="web-portfolio__extended extendable-content">
+          <p><strong>Responsibilities: </strong>
+            <br>The whole shebang - code, visual design, and UX decisions. Libraries listed below.</p>
+          
+          <p><strong>Languages: </strong>
+            <br>It's got all the basic ingredients 
+            - HTML, CSS, and JS.
+          </p>
+
+          <p>
+            <strong>Libraries: </strong>
+            <br>Using 
+          </p>
+            <ul>
+              <li><a target="_blank" href="https://glidejs.com/">Glide.js</a> for image carousel,</li>
+              <li><a target="_blank" href="https://animejs.com/">Anime.js</a> for the more complex animations.</li>
+            </ul>
+            <br>
+          
+
+          <p><strong>Stack: </strong>
+            <br>The page was 
+          developed locally using a LAMP server on a Ubuntu VM.
+          <br>
+          There's no real stack for the backend - it's all hosted on Github Pages.  
+          </p>   
+
+          <br>          
+        </div>
+        <button class="see-more-button web-portfolio__see-more-button"></button>
+      </div>
+    </article>
+
+    <article>
+      <h4>project - curiosity journey <span class="text-alpha">[alphA]</span></h4>
+      <div class="web-curiosity">        
+        <p><a target="_blank" href="https://github.com/zacvhogan/CuriosityHome"><i class="fa-brands fa-github"></i></a></p>        
+        <p>
+          <a href="http://www.zachogan.com/CuriosityHome/">View Site</a>
+          <br>
+          A gateway into viewing images taken by NASA's Curiosity rover.
+          <br><br>
+          Curiosity landed on Mars in 2012, and has taken over 60,000 images using its 17 cameras. Nearly 11 years later,
+          it's still travelling!
+        </p>          
+
+        <div class="web-curiosity__extended extendable-content">
+          <p>
+            <strong>The basics: </strong>
+            <br>
+            This site queries NASA's public Mars Rover Photos API, extracts data from the resulting JSON, and presents
+            it in list-form for easy navigation and viewing.
+            <br><br>
+            The mission manifest is fetched before the user interface loads, allowing the page to set
+            hard limits on dates that can be selected, as well as providing information regarding
+            which cameras were in use for each Earth date.
+            
+          </p>
+          <p>            
+            <strong>Further development: </strong> 
+            <br>
+            The visual design of the page is a placeholder. Hyperlinks will be replaced
+            with icons, and images will open in a lightbox/modal popup, with the option to open 
+            in a new tab if the user desires.
+            <br>
+            I plan to add an interactive 2D or 3D model of Curiosity that users 
+            can explore to get a physical sense of where each camera is.
+            <br>
+            I also hope to contact the Curiosity team to get locational data for Curiosity,
+            which will allow me to plot Curiosity's location for each Earth date on a map,
+            giving users a the ability to see where Curiosity is while they look at photos 
+            taken from that location.
+          </p>     
+
+          <p>            
+            <strong>More detail: </strong> 
+            <br>
+            For source code 
+            see the <a target="_blank" href="https://github.com/zacvhogan/CuriosityHome">Github repository</a> for this project.
+          </p>       
+          <br>  
+        </div>
+        <button class="see-more-button web-curiosity__see-more-button"></button>
+      </div>
+    </article>
+
+    <article>
+      <h4>project - easyscrollto.js</h4>
+      <div class="web-easy-scroll">        
+        <p><a target="_blank" href="https://github.com/zacvhogan/easyScrollTo"><i class="fa-brands fa-github"></i></a></p>        
+        <p>A tiny JS library that I developed to quickly implement smooth scrolling to page sections driven by
+          page links and buttons.</p>          
+
+        <div class="web-easy-scroll__extended extendable-content">
+          <p>
+            <strong>The basics: </strong>
+            <br>
+            This library links buttons with page sections via ID names. Once buttons or hyperlinks
+            and their associated page sections have been named in accordance with this 
+            library's guidelines,, the script facilitates smooth scrolling
+            to each section from anywhere in the page, triggered by button click. 
+          </p>
+          <p>
+            There's an adjustable topNavBarHeight value 
+            to help you ensure that any persistent navigation bars don't obscure page content.
+          </p>
+
+          <p>
+            This is designed to be plug-and-play. Integration into your project is as 
+            simple as adding a few ID names to your HTML.
+          </p>
+
+          <p>            
+            <strong>Further development: </strong> 
+            <br>
+            I'm aiming to make this library easier to implement for developers across various projects
+            by adding methods to allow a wider variety of class naming methodologies, and removing the need
+            to edit the easyScrollTo.js to achieve this.            
+          </p>     
+
+          <p>            
+            <strong>More detail: </strong> 
+            <br>
+            For more details about implementation, 
+            see the <a target="_blank" href="https://github.com/zacvhogan/easyScrollTo">Github repository</a> for this project.
+          </p>       
+          <br>  
+        </div>
+        <button class="see-more-button web-easy-scroll__see-more-button"></button>
+      </div>
+    </article>
+
+    <article class="web-skills-container">
       <h4><strong>skills</strong></h4>
       
       <div class="web-skills">     
@@ -180,93 +319,7 @@
       </div>
     </article>
 
-    <article>
-      <h4><strong>www.zachoGAn.com</strong> portfolio&nbsp;website</h4>
-      
-      <div class="web-portfolio">               
-        <p><a target="_blank" href="https://github.com/zacvhogan/zacvhogan.github.io"><i class="fa-brands fa-github"></i></a></p>        
-        <p>A little portfolio site about me. Largely designed and developed from scratch, and with the help of a couple of
-          external libraries.</p> 
-        
-        <div class="web-portfolio__extended extendable-content">
-          <p><strong>Responsibilities: </strong>
-            <br>The whole shebang - code, visual design, and UX decisions. Libraries listed below.</p>
-          
-          <p><strong>Languages: </strong>
-            <br>It's got all the basic ingredients 
-            - HTML, CSS, and JS.
-          </p>
 
-          <p>
-            <strong>Libraries: </strong>
-            <br>Using 
-          </p>
-            <ul>
-              <li><a target="_blank" href="https://glidejs.com/">Glide.js</a> for image carousel,</li>
-              <li><a target="_blank" href="https://animejs.com/">Anime.js</a> for the more complex animations.</li>
-            </ul>
-          
-
-          <p><strong>Stack: </strong>
-            <br>The page was 
-          developed locally using a LAMP server on a Ubuntu VM.
-          <br>
-          There's no real stack for the backend - it's all hosted on Github Pages.  
-          </p>   
-
-          <br>          
-        </div>
-        <button class="see-more-button web-portfolio__see-more-button"></button>
-      </div>
-    </article>
-
-
-
-    <article>
-      <h4><strong>easyscrollto.js</strong> js library</h4>
-      <div class="web-easy-scroll">        
-        <p><a target="_blank" href="https://github.com/zacvhogan/easyScrollTo"><i class="fa-brands fa-github"></i></a></p>        
-        <p>A tiny JS library that I developed to quickly implement smooth scrolling to page sections driven by
-          page links and buttons.</p>          
-
-        <div class="web-easy-scroll__extended extendable-content">
-          <p>
-            <strong>The basics: </strong>
-            <br>
-            This library links buttons with page sections via ID names. Once buttons or hyperlinks
-            and their associated page sections have been named in accordance with this 
-            library's guidelines,, the script facilitates smooth scrolling
-            to each section from anywhere in the page, triggered by button click. 
-          </p>
-          <p>
-            There's an adjustable topNavBarHeight value 
-            to help you ensure that any persistent navigation bars don't obscure page content.
-          </p>
-
-          <p>
-            This is designed to be plug-and-play. Integration into your project is as 
-            simple as adding a few ID names to your HTML.
-          </p>
-
-          <p>            
-            <strong>Further development: </strong> 
-            <br>
-            I'm aiming to make this library easier to implement for developers across various projects
-            by adding methods to allow a wider variety of class naming methodologies, and removing the need
-            to edit the easyScrollTo.js to achieve this.            
-          </p>     
-
-          <p>            
-            <strong>More detail: </strong> 
-            <br>
-            For more details about implementation, 
-            see the <a target="_blank" href="https://github.com/zacvhogan/easyScrollTo">Github repository</a> for this project.
-          </p>       
-          <br>  
-        </div>
-        <button class="see-more-button web-easy-scroll__see-more-button"></button>
-      </div>
-    </article>
   </div>
 
 
