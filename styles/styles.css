@@ -126,7 +126,10 @@ html {
 
 
 
-
+.project-image {
+  height: 300px;
+  display: inline;
+}
 
 .footer {
   font-size: smaller;

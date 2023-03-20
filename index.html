@@ -172,7 +172,7 @@
     </article>
 
     <article>
-      <h4>project - curiosity journey <span class="text-alpha">[alphA]</span></h4>
+      <h4>project - friends on mars<span class="text-alpha">[betA]</span></h4>
       <div class="web-curiosity">        
         <p><a target="_blank" href="https://github.com/zacvhogan/curiosityhome-dev"><i class="fa-brands fa-github"></i></a></p>        
         <p>
@@ -188,29 +188,63 @@
           <p>
             <strong>The basics: </strong>
             <br>
-            This site queries NASA's public Mars Rover Photos API, extracts data from the resulting JSON, and presents
-            it in list-form for easy navigation and viewing.
+              This site queries NASA's public Mars Rover Photos API, extracts data from the resulting JSON, and presents
+              it in list-form for easy navigation and viewing.
             <br><br>
-            The mission manifest is fetched before the user interface loads, allowing the page to set
-            hard limits on dates that can be selected, as well as providing information regarding
-            which cameras were in use for each Earth date.
+            <img class="project-image" src="img/project_images/Screenshot 2023-03-20 154739.png"> <img class="project-image" src="/img/project_images/Screenshot 2023-03-20 154830.png">      
+            <br>
+            <h3>Responsibilities and tools</h3>
+            <br>
+            <ul>
+              <li>Frontend - HTML, CSS, JS, AJAX</li>
+              <li>Backend - PHP</li>
+              <li>Visual development - Inkscape, Photoshop</li>
+              <li>Basic sysadmin - LAMP server on Digital Ocean</li>
+            </ul>
+            <p>
+<h3>api calls</h3>
+<p>
+  There are two key API calls to NASA's servers that need to be actioned. 
+  The mission manifest is fetched on page load, and this provides the start date of the rover's mission as well as the most recent database update date. 
+  This gives our date picker the correct bounds. The photo list is fetched when the user interacts with the form date-form.
+</p>
+<p>
+  Script fetchManager.js uses AJAX to query a PHP interface sitting in frontend ("frontController.php"). 
+  This interface filters queries by type ("manifest" or "photos") and then includes the nececessary file in backend ("getManifest.php" or "getPhotolist.php").
+</p>
+<p>
+  Queries to "frontController.php" of type "photos" require a second query ("date").
+  Both "getManifest.php" and "getPhotolist.php" simply call echo file_get_contents(), using the necessary URL for the NASA API call and appending my API key from Apache's env vars. "getPhotoList.php" also appends the user's specified date to the URL query.
+<br>
+</p>
+<p><strong>Note that the above probably isn't entirely best practice, and I am seeking advice and further info on how to ensure my PHP is secure and robust.</strong></p>
+            
+<h3>frontend data management</h3>
+<p>
+  When the API call for fetching photos is resolved, "fetchManager.js" processes the data for display. 
+  This includes pulling the relevant data for each photo entry from the resulting JSON (img URL, photo ID, camera name). 
+  This data is sorted into a photosObjFull object which contains nested keys for each camera type. Photos are sorted by camera type, so that they can be displayed on the page under the correct headings. 
+  HTML is then generated and rendered for the user. Users are notified if a date has no photos recorded for it (try 1st March 2023).
+</p>
+<h3>frontend design implementation</h3>
+<p>
+  The background planet system is constructed through rotating divs and imgs in 3D. 
+  The moons are divs attached to an inclined div plane. The moons themselves are animated to be rotated using the inverse of the rotations applied to the rest of the system - this keeps them facing the camera at all times. 
+  The background planet's 'spin' is created using a scrolling background image within a circular div. The starfield is a simple HTML5 canvas. The number of stars generated scales with the size of the viewport.
+</p>
+<h3>frontend design considerations</h3>
+<p>
+  Target audience is children. Key considerations include visual appeal (rounded shapes, a variety of colours, and big buttons), responsiveness, and accessibility.
+</p>
+
+<h3>major todos before full release:</h3><br>
+<ul>
+  <li>Mobile performance (background animation, try shifting all to Canvas)</li>
+  <li>Modal image previews</li>
+</ul>
             
           </p>
-          <p>            
-            <strong>Further development: </strong> 
-            <br>
-            The visual design of the page is a placeholder. Hyperlinks will be replaced
-            with icons, and images will open in a lightbox/modal popup, with the option to open 
-            in a new tab if the user desires.
-            <br>
-            I plan to add an interactive 2D or 3D model of Curiosity that users 
-            can explore to get a physical sense of where each camera is.
-            <br>
-            I also hope to contact the Curiosity team to get locational data for Curiosity,
-            which will allow me to plot Curiosity's location for each Earth date on a map,
-            giving users a the ability to see where Curiosity is while they look at photos 
-            taken from that location.
-          </p>     
+           
 
           <p>            
             <strong>More detail: </strong> 
